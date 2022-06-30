@@ -24,6 +24,7 @@ jobs:
       - name: maven-settings-xml-action
         uses: whelk-io/maven-settings-xml-action@v20
         with:
+          mirrors: '[{"id":"nexus-bjd","name":"releases","url":"http://lnexus.bjd-mc.com:8081/repository/maven-public/","blocked":"false","mirrorOf":"external:http:*"}]'
           repositories: '[{"id":"rdc-releases","url":"https://packages.aliyun.com/maven/repository/2226037-release-6NHZgB/","releases":{"enabled":"true"},"snapshots":{"enabled":"false"}},{"id":"rdc-snapshots","url":"https://packages.aliyun.com/maven/repository/2226037-snapshot-nXtM84/","releases":{"enabled":"false"},"snapshots":{"enabled":"true"}}]'
           servers: '[{"id":"rdc-releases","username":"6277b957588d6412eb4c10ec","password":"-gr1_=MP-frc"},{"id":"rdc-snapshots","username":"6277b957588d6412eb4c10ec","password":"-gr1_=MP-frc"},{"id":"nexuse-bjd","username":"Ayou","password":"bjdayou"}]'
       - name: Build with Maven
