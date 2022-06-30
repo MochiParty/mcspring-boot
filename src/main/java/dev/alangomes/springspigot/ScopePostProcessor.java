@@ -1,5 +1,5 @@
 package dev.alangomes.springspigot;
-
+ 
 import dev.alangomes.springspigot.scope.SenderContextScope;
 import lombok.val;
 import org.bukkit.event.Listener;
