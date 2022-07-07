@@ -38,7 +38,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
       - name: "Maven Deploy to rdc"
-        run: mvn deploy -DskipTests -DaltSnapshotDeploymentRepository=rdc-snapshots::default::https://packages.aliyun.com/maven/repository/2226037-release-6NHZgB/ -DaltReleaseDeploymentRepository=rdc-releases::default::https://packages.aliyun.com/maven/repository/2226037-snapshot-nXtM84/
+        run: mvn deploy -DskipTests -DaltSnapshotDeploymentRepository=rdc-snapshots::default::https://packages.aliyun.com/maven/repository/2226037-snapshot-nXtM84/ -DaltReleaseDeploymentRepository=rdc-releases::default::https://packages.aliyun.com/maven/repository/2226037-release-6NHZgB/
       - name: "Maven Deploy to bjd"
         run: mvn deploy -DskipTests -DaltSnapshotDeploymentRepository=nexuse-bjd::default::http://lnexus.bjd-mc.com:8081/repository/maven-snapshots/ -DaltReleaseDeploymentRepository=nexuse-bjd::default::http://lnexus.bjd-mc.com:8081/repository/maven-releases/
       - name: Set Release version env variable
